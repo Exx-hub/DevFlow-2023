@@ -55,10 +55,7 @@ body {
 }
 
 .gradient {
-  height: fit-content;
   z-index: 3;
-  width: 100%;
-  max-width: 640px;
   background-image: radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%),
     radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
     radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
@@ -71,14 +68,12 @@ body {
   width: 100%;
   height: 100%;
   filter: blur(100px) saturate(150%);
-  top: 80px;
-  opacity: 0.25;
+  opacity: 0.15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.blue_gradient {
-  @apply font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
-}
-
-.orange_gradient {
-  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+.black_gradient {
+  @apply bg-[#a399b2] bg-[linear-gradient(147deg,#8d839c_0%,#3b3741_74%)] bg-clip-text text-transparent;
 }
