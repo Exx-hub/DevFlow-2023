@@ -13,7 +13,8 @@
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #242424; */
   color: black;
-  background-color: white;
+  background-color: rgb(238, 238, 238);
+  /* background-color: white; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -76,4 +77,16 @@ body {
 
 .black_gradient {
   @apply bg-[#a399b2] bg-[linear-gradient(147deg,#8d839c_0%,#3b3741_74%)] bg-clip-text text-transparent;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

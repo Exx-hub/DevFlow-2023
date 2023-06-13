@@ -12,7 +12,9 @@ import useGetTime from "../hooks/useGetTime";
 function Weather() {
   const [data, setData] = useState<IWeather | null>(null);
 
-  const { isAm } = useGetTime();
+  const { showMoon } = useGetTime();
+
+  console.log(showMoon);
 
   useEffect(() => {
     const getWeather = async () => {
@@ -35,23 +37,21 @@ function Weather() {
       case "Clouds":
         return <FaCloud />;
       case "Rain":
-        return isAm ? <FaCloudShowersHeavy /> : <FaCloudMoonRain />;
+        return showMoon ? <FaCloudMoonRain /> : <FaCloudShowersHeavy />;
       case "Clear":
-        return isAm ? <FaCloudSun /> : <FaCloudMoon />;
+        return showMoon ? <FaCloudMoon /> : <FaCloudSun />;
       default:
         return;
     }
   };
 
-  //   console.log(isAm);
+  //   console.log(showMoon);
   //   console.log(getIcon(data?.weather[0].main));
 
   return (
-    <div className="absolute right-0 top-0">
-      {/* weather icon */}
-      <div>{getIcon(data?.weather[0].main)}</div>
-      {/* temp   */}
-      {data ? <h3>{Math.round(data.main.temp - 273)}°</h3> : "--"}
+    <div className="w-[160px] flex flex-col items-end justify-center text-gray-400">
+      <div className="text-lg">{getIcon(data?.weather[0].main)}</div>
+      {data ? <h3 className="text-xs">{Math.round(data.main.temp - 273)}°</h3> : "--"}
     </div>
   );
 }

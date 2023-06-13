@@ -1,12 +1,11 @@
+import FeatureCard from "../components/FeatureCard";
 import Greeting from "../components/Greeting";
-import Weather from "../components/Weather";
 
 function HomePage() {
   return (
-    <div className="h-screen relative">
+    <div className="h-[calc(100vh-58px)] relative flex flex-col items-center justify-center">
       <Greeting />
-      <Weather />
-      {/* feature cards carousel  */}
+      <FeatureCard />
     </div>
   );
 }

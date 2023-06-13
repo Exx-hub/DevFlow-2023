@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 
 const useGetTIme = () => {
   const [time, setTime] = useState("");
-  const [isAm, setIsAm] = useState(false);
+  const [showMoon, setShowMoon] = useState(false);
 
   useEffect(() => {
     const now = new Date();
+    const hour = now.getHours();
+
     const timeFormat = now.toLocaleTimeString("en-SG", {
       hour: "numeric",
       minute: "numeric",
@@ -14,10 +16,16 @@ const useGetTIme = () => {
 
     setTime(timeFormat);
 
-    setIsAm(timeFormat.includes("am"));
+    if (hour >= 18 && hour <= 24) {
+      setShowMoon(true);
+    } else if (hour < 6) {
+      setShowMoon(true);
+    } else {
+      setShowMoon(false);
+    }
   }, []);
 
-  return { time, isAm };
+  return { time, showMoon };
 };
 
 export default useGetTIme;
