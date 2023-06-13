@@ -35,6 +35,10 @@ body {
   min-height: 100vh;
 }
 
+.active-link {
+  @apply text-[#333] font-semibold;
+}
+
 .main {
   width: 100vw;
   min-height: 100vh;
