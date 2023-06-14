@@ -13,7 +13,7 @@ function AddItemForm({ onSubmit, onChange, onCancel, value }: AddItemFormProps) 
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="border border-gray-200 rounded outline-none px-2 text-black"
+        className="border border-gray-200 rounded outline-none px-2 text-black text-xs md:text-sm lg:text-lg"
         placeholder="Add a goal..."
       />
       <button className="text-[#8d839c] text-lg" type="submit">

@@ -80,7 +80,7 @@ body {
 }
 
 .tab {
-  @apply p-2 rounded-t-[3px] shadow-[6px_0_4px_-4px_#999,-2px_0_4px_-4px_#999];
+  @apply p-2 rounded-t-[3px] shadow-[6px_0_4px_-4px_#999,-2px_0_4px_-4px_#999] text-xs lg:text-sm;
 }
 
 .black_gradient {

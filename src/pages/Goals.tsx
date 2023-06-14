@@ -104,16 +104,16 @@ const Goals = () => {
         <div className="p-4 bg-gray-100 shadow-lg rounded">
           {currentDisplay === "career" ? (
             <div className="flex flex-col">
-              <h2 className="text-2xl font-bold mb-2 black_gradient animate-slide-from-top">
+              <h2 className="text-xl lg:text-2xl font-bold mb-2 black_gradient animate-slide-from-top">
                 Daily Grind.
               </h2>
               <ul className="px-1">
                 {goals?.map((goal) => (
-                  <div key={goal.id} className="flex items-center space-x-1">
-                    <h2>{goal.title}</h2>
+                  <div key={goal.id} className="flex items-center space-x-1 mb-1">
+                    <h2 className="text-xs md:text-sm lg:text-lg">{goal.title}</h2>
                     <span
                       onClick={() => deleteGoal(goal.id)}
-                      className="cursor-pointer text-[#5b5861]"
+                      className="cursor-pointer text-[#5b5861] text-sm lg:text-lg"
                     >
                       <HiOutlineTrash />
                     </span>
@@ -138,16 +138,16 @@ const Goals = () => {
             </div>
           ) : (
             <div className="flex flex-col">
-              <h2 className="text-2xl font-bold mb-2 black_gradient animate-fadeIn">
+              <h2 className="text-xl lg:text-2xl font-bold mb-2 black_gradient animate-fadeIn">
                 Closer today.
               </h2>
               <ul className="px-1 animate-fadeIn">
                 {goals?.map((goal) => (
-                  <div key={goal.id} className="flex items-center space-x-1">
-                    <h2>{goal.title}</h2>
+                  <div key={goal.id} className="flex items-center space-x-1 mb-1">
+                    <h2 className="text-xs md:text-sm lg:text-lg">{goal.title}</h2>
                     <span
                       onClick={() => deleteGoal(goal.id)}
-                      className="cursor-pointer text-[#5b5861]"
+                      className="cursor-pointer text-[#5b5861] text-sm lg:text-lg"
                     >
                       <HiOutlineTrash />
                     </span>
