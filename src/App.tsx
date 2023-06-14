@@ -4,6 +4,9 @@ import ChatBot from "./pages/ChatBot";
 import Layout from "./components/Layout";
 import ErrorPage from "./pages/ErrorPage";
 import DebugDucky from "./pages/DebugDucky";
+import Pomodoro from "./pages/Pomodoro";
+import FreedomBoard from "./pages/FreedomBoard";
+import Goals from "./pages/Goals";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +26,18 @@ function App() {
         {
           path: "/debug-ducky",
           element: <DebugDucky />,
+        },
+        {
+          path: "/goals",
+          element: <Goals />,
+        },
+        {
+          path: "/pomodoro",
+          element: <Pomodoro />,
+        },
+        {
+          path: "/freedom-board",
+          element: <FreedomBoard />,
         },
       ],
     },

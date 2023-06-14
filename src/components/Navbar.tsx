@@ -5,8 +5,11 @@ import Weather from "./Weather";
 function Navbar() {
   const home = useMatch("/");
   const chatbot = useMatch("/chatbot");
-  const pomorodo = useMatch("/pomodoro");
+  const pomodoro = useMatch("/pomodoro");
+  const goals = useMatch("/goals");
+  goals;
   const debug = useMatch("/debug-ducky");
+  const freedom = useMatch("/freedom-board");
 
   return (
     <header className="flex justify-between items-center lg:px-5 py-3">
@@ -25,8 +28,14 @@ function Navbar() {
           <Link to="/debug-ducky" className={debug ? "active-link" : ""}>
             Debug
           </Link>
-          <Link to="/pomodoro" className={pomorodo ? "active-link" : ""}>
+          <Link to="/pomodoro" className={pomodoro ? "active-link" : ""}>
             Pomodoro
+          </Link>
+          <Link to="/goals" className={goals ? "active-link" : ""}>
+            Goals
+          </Link>
+          <Link to="/freedom-board" className={freedom ? "active-link" : ""}>
+            FreedomBoard
           </Link>
         </nav>
       )}

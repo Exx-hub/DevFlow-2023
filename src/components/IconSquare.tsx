@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import { BiBot } from "react-icons/bi";
 import { MdOutlineTimer } from "react-icons/md";
 import { GiPlasticDuck } from "react-icons/gi";
 // import { VscDebugConsole } from "react-icons/vsc";
 import { FiTarget } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { TbKeyboard } from "react-icons/tb";
 
 interface IconSquareProps {
   icon: string;
@@ -21,6 +22,8 @@ function IconSquare({ icon, path }: IconSquareProps) {
         return <GiPlasticDuck />;
       case "fitarget":
         return <FiTarget />;
+      case "tbkeyboard":
+        return <TbKeyboard />;
       default:
         return;
     }
@@ -28,7 +31,7 @@ function IconSquare({ icon, path }: IconSquareProps) {
   return (
     <Link
       to={path}
-      className="group bg-[#333] w-[52px] h-[52px] lg:w-[70px] lg:h-[70px] flex items-center justify-center overflow-hidden text-white transition-all duration-300 hover:bg-[#8d839c]"
+      className="group bg-[#333] w-[48px] h-[48px] md:w-[52px] md:h-[52px] lg:w-[70px] lg:h-[70px] flex items-center justify-center overflow-hidden text-white transition-all duration-300 hover:bg-[#8d839c]"
     >
       <div className="group-hover:animate-slide-from-top text-lg lg:text-xl">{getIcon(icon)}</div>
     </Link>
