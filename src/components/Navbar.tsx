@@ -22,11 +22,11 @@ function Navbar() {
           <Link to="/chatbot" className={chatbot ? "active-link" : ""}>
             Chatbot
           </Link>
-          <Link to="/pomodoro" className={pomorodo ? "active-link" : ""}>
-            Pomodoro
-          </Link>
           <Link to="/debug-ducky" className={debug ? "active-link" : ""}>
             Debug
+          </Link>
+          <Link to="/pomodoro" className={pomorodo ? "active-link" : ""}>
+            Pomodoro
           </Link>
         </nav>
       )}

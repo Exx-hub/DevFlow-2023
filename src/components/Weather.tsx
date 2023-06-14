@@ -14,7 +14,7 @@ function Weather() {
 
   const { showMoon } = useGetTime();
 
-  console.log(showMoon);
+  // console.log({showMoon});
 
   useEffect(() => {
     const getWeather = async () => {

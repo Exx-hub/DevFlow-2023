@@ -108,10 +108,10 @@ function ChatBot() {
   };
 
   return (
-    <div className="w-full mt-20 xl:mt-32">
+    <div className="w-full h-[calc(100vh-58px)] pt-20 xl:pt-32">
       <div className="text-black flex items-center justify-center">
         <div className="w-full lg:w-[60%] p-8 rounded-md bg-gray-100 shadow-[0px_0px_20px_rgba(0,0,0,0.055)]">
-          <h1 className="text-2xl lg:text-3xl font-bold mb-6">ASK ME ANYTHING</h1>
+          <h1 className="text-2xl lg:text-3xl font-bold mb-6 black_gradient">ask me anything</h1>
           <div className="mt-4 h-48 overflow-y-auto">
             <p className="text-gray-500 text-sm mb-2">
               {displayPrompt ? displayPrompt : "Generated Text"}
@@ -126,7 +126,7 @@ function ChatBot() {
           />
           <div className="flex justify-center mt-4">
             <button
-              className="w-1/2 px-4 py-2 rounded-md bg-[#726b7d] text-white hover:bg-[#333] focus:outline-none mr-2 disabled:opacity-75 disabled:cursor-not-allowed"
+              className="w-1/2 px-4 py-2 rounded-md bg-[#333] text-white hover:bg-[#726b7d] focus:outline-none mr-2 disabled:opacity-75 disabled:cursor-not-allowed"
               onClick={generate}
               disabled={!prompt}
             >

@@ -7,7 +7,7 @@ const useGreeting = () => {
     const a = new Date();
     const hour = a.getHours();
 
-    console.log(hour);
+    // console.log({hour});
 
     if (hour >= 18 && hour <= 24) {
       setGreeting("evening");

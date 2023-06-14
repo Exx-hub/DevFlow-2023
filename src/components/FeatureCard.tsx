@@ -9,13 +9,13 @@ function FeatureCard() {
     },
     {
       id: 1,
-      icon: "mdoutlinetimer",
-      path: "/pomodoro",
+      icon: "giplasticduck",
+      path: "debug-ducky",
     },
     {
       id: 2,
-      icon: "giplasticduck",
-      path: "debug-ducky",
+      icon: "mdoutlinetimer",
+      path: "/pomodoro",
     },
     {
       id: 3,
