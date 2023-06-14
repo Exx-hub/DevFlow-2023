@@ -79,6 +79,10 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.tab {
+  @apply p-2 rounded-t-[3px] shadow-[6px_0_4px_-4px_#999,-2px_0_4px_-4px_#999];
+}
+
 .black_gradient {
   @apply bg-[#a399b2] bg-[linear-gradient(147deg,#8d839c_0%,#3b3741_74%)] bg-clip-text text-transparent;
 }

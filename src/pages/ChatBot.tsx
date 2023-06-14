@@ -108,7 +108,7 @@ function ChatBot() {
   };
 
   return (
-    <div className="w-full h-[calc(100vh-58px)] pt-20 xl:pt-32">
+    <div className="w-full h-[calc(100vh-58px)] pt-20 xl:pt-32 animate-fadeIn">
       <div className="text-black flex items-center justify-center">
         <div className="w-full lg:w-[60%] p-8 rounded-md bg-gray-100 shadow-[0px_0px_20px_rgba(0,0,0,0.055)]">
           <h1 className="text-2xl lg:text-3xl font-bold mb-6 black_gradient">ask me anything</h1>

@@ -8,6 +8,10 @@ export default {
           "0%": { transform: "translateY(-50px)", opacity: 0 },
           "100%": { transform: "translateY(0)", opacity: 1 },
         },
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
         wiggle: {
           "0%": { transform: "rotate(0.0deg)" },
           "10%": { transform: "rotate(14deg)" },
@@ -22,6 +26,7 @@ export default {
       animation: {
         "slide-from-top": "slide-down 300ms both",
         wiggle: "wiggle 2s linear infinite",
+        fadeIn: "fadeIn 800ms",
       },
     },
   },

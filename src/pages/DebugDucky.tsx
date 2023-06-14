@@ -2,7 +2,7 @@ import ducky from "../assets/ducky.png";
 
 function DebugDucky() {
   return (
-    <div className="w-full h-[calc(100vh-58px)] flex flex-col items-center pt-28">
+    <div className="w-full h-[calc(100vh-58px)] flex flex-col items-center pt-28 animate-fadeIn">
       <h2 className="min-w-[278px] text-xl sm:text-2xl lg:text-4xl black_gradient">
         Debug Ducky. <span className="text-black">Quack the code.</span>
       </h2>
