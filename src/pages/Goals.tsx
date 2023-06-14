@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { HiOutlinePlusCircle } from "react-icons/hi";
+import { HiOutlinePlusCircle, HiOutlineTrash } from "react-icons/hi";
 import AddItemForm from "../components/AddItemForm";
-import { addDoc, collection, getDocs, onSnapshot } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
 import { db } from "../config/firebase-config";
 
 interface Goal {
@@ -62,6 +62,11 @@ const Goals = () => {
     return () => unsubscribe();
   }, [currentDisplay]);
 
+  const deleteGoal = async (id: string) => {
+    const docToDelete = doc(db, "goals", id);
+    await deleteDoc(docToDelete);
+  };
+
   return (
     <div className="w-full h-[calc(100vh-58px)] pt-20 xl:pt-32 animate-fadeIn">
       <div className="w-full lg:w-[60%] mx-auto">
@@ -104,7 +109,15 @@ const Goals = () => {
               </h2>
               <ul className="px-1">
                 {goals?.map((goal) => (
-                  <h2 key={goal.id}>{goal.title}</h2>
+                  <div key={goal.id} className="flex items-center space-x-1">
+                    <h2>{goal.title}</h2>
+                    <span
+                      onClick={() => deleteGoal(goal.id)}
+                      className="cursor-pointer text-[#5b5861]"
+                    >
+                      <HiOutlineTrash />
+                    </span>
+                  </div>
                 ))}
               </ul>
               {isAdding ? (
@@ -130,7 +143,15 @@ const Goals = () => {
               </h2>
               <ul className="px-1 animate-fadeIn">
                 {goals?.map((goal) => (
-                  <h2 key={goal.id}>{goal.title}</h2>
+                  <div key={goal.id} className="flex items-center space-x-1">
+                    <h2>{goal.title}</h2>
+                    <span
+                      onClick={() => deleteGoal(goal.id)}
+                      className="cursor-pointer text-[#5b5861]"
+                    >
+                      <HiOutlineTrash />
+                    </span>
+                  </div>
                 ))}
               </ul>
               {isAdding ? (
