@@ -16,6 +16,7 @@ function AddItemForm({ onSubmit, onChange, onCancel, value, forGoals }: AddItemF
         onChange={(e) => onChange(e.target.value)}
         className="border border-gray-200 rounded outline-none px-2 text-black text-xs md:text-sm lg:text-lg"
         placeholder={forGoals ? "Add a goal..." : "Add a note..."}
+        maxLength={120}
       />
       <button className="text-[#8d839c] text-lg" type="submit">
         {forGoals ? <HiOutlineCheckCircle /> : <HiOutlinePlusCircle />}
