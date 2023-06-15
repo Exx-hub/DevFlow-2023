@@ -98,3 +98,74 @@ body {
     opacity: 1;
   }
 }
+
+/* freedom board  */
+
+.grid-container {
+  display: grid;
+  height: 400px;
+  grid-template-columns: 2.5fr 2.3fr 1.2fr;
+  grid-template-rows: 1.1fr 0.9fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "first second sixth"
+    "third third sixth"
+    "fourth fifth fifth";
+}
+
+.todo-card {
+  padding: 10px;
+  transition: 400ms;
+  border-radius: 3px;
+}
+
+.first {
+  grid-area: first;
+  background-color: #feff9c;
+}
+.second {
+  grid-area: second;
+  background-color: #dfecde;
+}
+.third {
+  grid-area: third;
+  background-color: #ded3fd;
+}
+.fourth {
+  grid-area: fourth;
+  background-color: #fde9c9;
+}
+.fifth {
+  grid-area: fifth;
+  background-color: #deecec;
+}
+.sixth {
+  grid-area: sixth;
+  background-color: #ff7eb9;
+}
+
+.todo-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.grid-container:hover > .todo-card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
+
+@media screen and (max-width: 740px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+
+  .todo-card:hover {
+    transform: none;
+  }
+
+  .grid-container:hover > .todo-card:not(:hover) {
+    filter: none;
+    transform: none;
+  }
+}

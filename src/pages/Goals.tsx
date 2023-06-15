@@ -19,12 +19,21 @@ const Goals = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    await addDoc(collection(db, "goals"), { title: input, type: currentDisplay });
-    console.log("new goal added");
+    if (!isAdding || !input) {
+      console.log("please enter an input");
+      return;
+    }
 
-    console.log({ input, submittedBy: currentDisplay });
-    setInput("");
-    setisAdding(false);
+    try {
+      await addDoc(collection(db, "goals"), { title: input, type: currentDisplay });
+      console.log("new goal added");
+
+      console.log({ input, submittedBy: currentDisplay });
+      setInput("");
+      setisAdding(false);
+    } catch (error) {
+      console.log(error);
+    }
   };
   const handleCancel = () => {
     setisAdding(false);
@@ -126,6 +135,7 @@ const Goals = () => {
                   onCancel={handleCancel}
                   onChange={setInput}
                   value={input}
+                  forGoals
                 />
               ) : (
                 <button
@@ -160,6 +170,7 @@ const Goals = () => {
                   onCancel={handleCancel}
                   onChange={setInput}
                   value={input}
+                  forGoals
                 />
               ) : (
                 <button

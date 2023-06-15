@@ -5,7 +5,7 @@ import Layout from "./components/Layout";
 import ErrorPage from "./pages/ErrorPage";
 import DebugDucky from "./pages/DebugDucky";
 import Pomodoro from "./pages/Pomodoro";
-import FreedomBoard from "./pages/FreedomBoard";
+import StickyNotes from "./pages/StickyNotes";
 import Goals from "./pages/Goals";
 
 function App() {
@@ -36,8 +36,8 @@ function App() {
           element: <Pomodoro />,
         },
         {
-          path: "/freedom-board",
-          element: <FreedomBoard />,
+          path: "/sticky-notes",
+          element: <StickyNotes />,
         },
       ],
     },

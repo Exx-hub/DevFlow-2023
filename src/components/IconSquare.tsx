@@ -4,7 +4,7 @@ import { MdOutlineTimer } from "react-icons/md";
 import { GiPlasticDuck } from "react-icons/gi";
 // import { VscDebugConsole } from "react-icons/vsc";
 import { FiTarget } from "react-icons/fi";
-import { TbKeyboard } from "react-icons/tb";
+import { FaRegStickyNote } from "react-icons/fa";
 
 interface IconSquareProps {
   icon: string;
@@ -22,8 +22,8 @@ function IconSquare({ icon, path }: IconSquareProps) {
         return <GiPlasticDuck />;
       case "fitarget":
         return <FiTarget />;
-      case "tbkeyboard":
-        return <TbKeyboard />;
+      case "faregstickynote":
+        return <FaRegStickyNote />;
       default:
         return;
     }

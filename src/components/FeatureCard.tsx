@@ -3,29 +3,30 @@ import IconSquare from "./IconSquare";
 function FeatureCard() {
   const features = [
     {
-      id: 0,
-      icon: "bibot",
-      path: "/chatbot",
+      id: 1,
+      icon: "faregstickynote",
+      path: "/sticky-notes",
     },
     {
-      id: 1,
+      id: 2,
       icon: "giplasticduck",
       path: "debug-ducky",
     },
     {
-      id: 2,
+      id: 3,
+      icon: "bibot",
+      path: "/chatbot",
+    },
+
+    {
+      id: 4,
       icon: "mdoutlinetimer",
       path: "/pomodoro",
     },
     {
-      id: 3,
+      id: 5,
       icon: "fitarget",
       path: "/goals",
-    },
-    {
-      id: 4,
-      icon: "tbkeyboard",
-      path: "/freedom-board",
     },
   ];
   return (

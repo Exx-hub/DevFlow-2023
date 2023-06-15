@@ -7,9 +7,8 @@ function Navbar() {
   const chatbot = useMatch("/chatbot");
   const pomodoro = useMatch("/pomodoro");
   const goals = useMatch("/goals");
-  goals;
   const debug = useMatch("/debug-ducky");
-  const freedom = useMatch("/freedom-board");
+  const sticky = useMatch("/sticky-notes");
 
   return (
     <header className="flex justify-between items-center lg:px-5 py-3">
@@ -22,20 +21,20 @@ function Navbar() {
           <Link to="/" className={home ? "active-link" : ""}>
             Home
           </Link>
-          <Link to="/chatbot" className={chatbot ? "active-link" : ""}>
-            Chatbot
+          <Link to="/sticky-notes" className={sticky ? "active-link" : ""}>
+            StickyNotes
           </Link>
           <Link to="/debug-ducky" className={debug ? "active-link" : ""}>
             Debug
           </Link>
-          <Link to="/pomodoro" className={pomodoro ? "active-link" : ""}>
-            Pomodoro
+          <Link to="/chatbot" className={chatbot ? "active-link" : ""}>
+            Chatbot
           </Link>
           <Link to="/goals" className={goals ? "active-link" : ""}>
             Goals
           </Link>
-          <Link to="/freedom-board" className={freedom ? "active-link" : ""}>
-            FreedomBoard
+          <Link to="/pomodoro" className={pomodoro ? "active-link" : ""}>
+            Pomodoro
           </Link>
         </nav>
       )}
