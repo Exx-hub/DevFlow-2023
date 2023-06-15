@@ -72,8 +72,12 @@ const Goals = () => {
   }, [currentDisplay]);
 
   const deleteGoal = async (id: string) => {
-    const docToDelete = doc(db, "goals", id);
-    await deleteDoc(docToDelete);
+    try {
+      const docToDelete = doc(db, "goals", id);
+      await deleteDoc(docToDelete);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

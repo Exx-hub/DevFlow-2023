@@ -48,18 +48,24 @@ function StickyNotes() {
       return;
     }
 
-    await addDoc(collection(db, "notes"), { text: input, ordinal: ordinalToAdd });
-    console.log("added note");
-    setInput("");
+    try {
+      await addDoc(collection(db, "notes"), { text: input, ordinal: ordinalToAdd });
+      console.log("added note");
+      setInput("");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleDelete = async (id: string) => {
     const noteToDelete = doc(db, "notes", id);
 
-    await deleteDoc(noteToDelete);
-
-    console.log(id);
-    console.log("note deleted");
+    try {
+      await deleteDoc(noteToDelete);
+      console.log("note deleted");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const getClassName = (index: number | undefined) => {

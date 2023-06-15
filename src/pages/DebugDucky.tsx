@@ -1,6 +1,18 @@
+import { useEffect } from "react";
 import ducky from "../assets/ducky.png";
+import quack from "../assets/quack.mp3";
 
 function DebugDucky() {
+  useEffect(() => {
+    const audio = new Audio(quack);
+
+    audio.play();
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, []);
   return (
     <div className="w-full h-[calc(100vh-58px)] flex flex-col items-center pt-28 animate-fadeIn">
       <h2 className="min-w-[278px] text-xl sm:text-2xl lg:text-4xl black_gradient">
