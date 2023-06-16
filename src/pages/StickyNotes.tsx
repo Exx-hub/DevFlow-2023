@@ -91,7 +91,7 @@ function StickyNotes() {
         <h2 className="text-xl lg:text-2xl font-bold mb-2 black_gradient animate-slide-from-top">
           Sticky Notes
         </h2>
-        {todos.length ? (
+        {todos.length > 0 ? (
           <div className="grid-container">
             {todos.map((todo) => (
               <div key={todo.id} className={`${getClassName(todo.ordinal)} todo-card relative`}>

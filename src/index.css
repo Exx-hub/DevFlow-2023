@@ -99,6 +99,40 @@ body {
   }
 }
 
+.mobile-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 13px;
+  left: 2px;
+  background-color: black;
+  color: white;
+  transform: translateY(100%);
+  border: 1px solid lightgray;
+  z-index: 100;
+
+  min-width: 118px;
+  opacity: 1;
+  transition: all 200ms ease-in;
+}
+
+.mobileMenuHidden {
+  opacity: 0;
+}
+
+.mobile-nav a {
+  border-bottom: 1px solid gray;
+  padding: 4px 3px;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: normal;
+}
+
+.mobile-nav a:hover {
+  color: black;
+  background-color: white;
+}
+
 /* freedom board  */
 
 .grid-container {
