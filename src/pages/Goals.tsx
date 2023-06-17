@@ -3,6 +3,7 @@ import { HiOutlinePlusCircle, HiOutlineTrash } from "react-icons/hi";
 import AddItemForm from "../components/AddItemForm";
 import { addDoc, collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
 import { db } from "../config/firebase-config";
+import useTitle from "../hooks/useTitle";
 
 interface Goal {
   id: string;
@@ -15,6 +16,8 @@ const Goals = () => {
   const [isAdding, setisAdding] = useState(false);
   const [input, setInput] = useState("");
   const [goals, setGoals] = useState<Goal[] | null>([]);
+
+  useTitle("DevFlow AI - Goals");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

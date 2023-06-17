@@ -2,7 +2,7 @@ import { addDoc, collection, deleteDoc, doc, onSnapshot } from "firebase/firesto
 import { useEffect, useState } from "react";
 import { db } from "../config/firebase-config";
 import AddItemForm from "./AddItemForm";
-import { HiOutlineCheck, HiOutlineCheckCircle, HiOutlineTrash } from "react-icons/hi";
+import { HiOutlineCheckCircle } from "react-icons/hi";
 
 function CurrentTask() {
   const [currentTask, setCurrentTask] = useState({} as { task?: string; id: string });

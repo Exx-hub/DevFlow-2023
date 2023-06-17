@@ -4,6 +4,7 @@ import { HiOutlineTrash } from "react-icons/hi";
 import { addDoc, collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
 import { db } from "../config/firebase-config";
 import { getMissingOrdinal } from "../helpers/getMissingOrdinal";
+import useTitle from "../hooks/useTitle";
 
 interface Note {
   text?: string;
@@ -20,6 +21,8 @@ function StickyNotes() {
   const ordinalToAdd = getMissingOrdinal(currentOrdinals);
 
   console.log(ordinalToAdd);
+
+  useTitle("DevFlow AI - Sticky Notes");
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, "notes"), (snapshot) => {

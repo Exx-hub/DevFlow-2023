@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import ducky from "../assets/ducky.png";
 import quack from "../assets/quack.mp3";
+import useTitle from "../hooks/useTitle";
 
 function DebugDucky() {
+  useTitle("DevFlow AI - Debug Ducky");
+
   useEffect(() => {
     const audio = new Audio(quack);
 
