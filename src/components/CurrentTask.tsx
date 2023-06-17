@@ -2,7 +2,7 @@ import { addDoc, collection, deleteDoc, doc, onSnapshot } from "firebase/firesto
 import { useEffect, useState } from "react";
 import { db } from "../config/firebase-config";
 import AddItemForm from "./AddItemForm";
-import { HiOutlineTrash } from "react-icons/hi";
+import { HiOutlineCheck, HiOutlineCheckCircle, HiOutlineTrash } from "react-icons/hi";
 
 function CurrentTask() {
   const [currentTask, setCurrentTask] = useState({} as { task?: string; id: string });
@@ -48,10 +48,10 @@ function CurrentTask() {
         <p>Loading...</p>
       ) : currentTask.task && currentTask.id ? (
         <div className="flex items-center space-x-1">
-          <h2>{currentTask.task}</h2>
           <span className="cursor-pointer" onClick={() => handleDelete(currentTask.id)}>
-            <HiOutlineTrash />
+            <HiOutlineCheckCircle />
           </span>
+          <h2 className="font-semibold text-sm md:text-lg">{currentTask.task}</h2>
         </div>
       ) : (
         <AddItemForm
