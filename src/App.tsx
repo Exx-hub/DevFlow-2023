@@ -7,6 +7,7 @@ import DebugDucky from "./pages/DebugDucky";
 import Pomodoro from "./pages/Pomodoro";
 import StickyNotes from "./pages/StickyNotes";
 import Goals from "./pages/Goals";
+import AuthContextProvider from "./context/AuthContext";
 
 function App() {
   const router = createBrowserRouter([
@@ -48,7 +49,9 @@ function App() {
       <div className="main -z-10">
         <div className="gradient h-screen"></div>
       </div>
-      <RouterProvider router={router} />
+      <AuthContextProvider>
+        <RouterProvider router={router} />
+      </AuthContextProvider>
     </>
   );
 }

@@ -1,11 +1,16 @@
+import { useContext, useState } from "react";
 import { Link, useMatch } from "react-router-dom";
-import logo from "../assets/devflow-logo.png";
-import Weather from "./Weather";
 import { FaCaretDown } from "react-icons/fa";
-import { useState } from "react";
+import logo from "../assets/devflow-logo.png";
+import Auth from "./Auth";
+import { AuthContext } from "../context/AuthContext";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const { user } = useContext(AuthContext);
+
+  console.log(user);
 
   const home = useMatch("/");
   const chatbot = useMatch("/chatbot");
@@ -63,7 +68,7 @@ function Navbar() {
         <Link to="/pomodoro">Pomodoro</Link>
       </nav>
 
-      <Weather />
+      <Auth />
     </header>
   );
 }

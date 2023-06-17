@@ -49,7 +49,7 @@ function Weather() {
   //   console.log(getIcon(data?.weather[0].main));
 
   return (
-    <div className="w-[160px] flex flex-col items-end justify-center text-gray-400">
+    <div className="flex flex-col items-end justify-center text-gray-400">
       <div className="text-lg">{getIcon(data?.weather[0].main)}</div>
       {data ? <h3 className="text-xs">{Math.round(data.main.temp - 273)}°</h3> : "--"}
     </div>
