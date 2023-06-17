@@ -6,16 +6,24 @@ interface AddItemFormProps {
   onCancel?: () => void;
   value: string;
   forGoals?: boolean;
+  placeholder: string;
 }
 
-function AddItemForm({ onSubmit, onChange, onCancel, value, forGoals }: AddItemFormProps) {
+function AddItemForm({
+  onSubmit,
+  onChange,
+  onCancel,
+  value,
+  forGoals,
+  placeholder,
+}: AddItemFormProps) {
   return (
     <form onSubmit={onSubmit} className="flex items-center space-x-1 mt-2 animate-fadeIn">
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className="border border-gray-200 rounded outline-none px-2 text-black text-xs md:text-sm lg:text-lg"
-        placeholder={forGoals ? "Add a goal..." : "Add a note..."}
+        placeholder={placeholder}
         maxLength={120}
       />
       <button className="text-[#8d839c] text-lg" type="submit">

@@ -140,6 +140,7 @@ const Goals = () => {
                   onChange={setInput}
                   value={input}
                   forGoals
+                  placeholder="Add a goal..."
                 />
               ) : (
                 <button
@@ -175,6 +176,7 @@ const Goals = () => {
                   onChange={setInput}
                   value={input}
                   forGoals
+                  placeholder="Add a goal..."
                 />
               ) : (
                 <button

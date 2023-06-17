@@ -110,7 +110,12 @@ function StickyNotes() {
         )}
 
         {todos.length < 6 ? (
-          <AddItemForm value={input} onChange={setInput} onSubmit={handleSubmit} />
+          <AddItemForm
+            value={input}
+            onChange={setInput}
+            onSubmit={handleSubmit}
+            placeholder="Add a sticky..."
+          />
         ) : null}
       </div>
     </div>
