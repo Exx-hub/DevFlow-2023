@@ -10,7 +10,7 @@ function Layout() {
         *Authentication and route restriction disabled for presentation purposes.
         <span className="hidden md:inline">
           ---
-          <a href="www.acosta.codes" target="_blank" className="underline">
+          <a href="https://www.acosta.codes" target="_blank" className="underline">
             {" "}
             www.acosta.codes
           </a>

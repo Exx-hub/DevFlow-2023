@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 import { GoogleAuthProvider, getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCBpg-P2PJUR_m-OImoI1D_6DLSQUN26QE",
+  apiKey: import.meta.env.VITE_FIREBASE_APIKEY,
   authDomain: "devflow-ai.firebaseapp.com",
   projectId: "devflow-ai",
   storageBucket: "devflow-ai.appspot.com",
